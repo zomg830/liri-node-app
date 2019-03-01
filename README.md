@@ -24,11 +24,11 @@ As you can see, the movie command also has an additional flag, `-y` that accepts
 
 It is very simple to get the app set up, simply navigate to the root directory of the `liri-node-app` and run an example command, such as the one shown below:
 
-![Code Demonstration](/assets/images/Capture1.JPG?raw=true){:height="75%" width="75%"}
+![Code Demonstration](/assets/images/Capture1.JPG?raw=true&s=200)
 
 Upon execution of the code, the data retrieved from the API will be presented in the command line interface.
 
-![Code Demonstration](/assets/images/Capture2.JPG?raw=true){:height="75%" width="75%"}
+![Code Demonstration](/assets/images/Capture2.JPG?raw=true&s=200)
 
 # APIs & Dependencies
 * dotenv
