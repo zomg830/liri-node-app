@@ -4,8 +4,10 @@ const _ = require('lodash');
 const yargs = require('yargs');
 const spotify = require('./spotify');
 const OMDB = require('./OMDB');
-var moment = require('moment');
-var bands = require('./bands');
+const moment = require('moment');
+const bands = require('./bands');
+const newsAPI = require('./newsAPI');
+const weather = require('./weather');
 
 const inputOptions = {
     describe: 'input data',
@@ -29,6 +31,12 @@ const argv = yargs
     .command('movie', 'Searches OMDB for the subject movie', {
         input: inputOptions,
         year: yearOptions
+    })
+    .command('news', 'Searches for news articles related to the subject input',{
+        input: inputOptions
+    })
+    .command('weather', 'Finds the weather near the specified address',{
+        input: inputOptions
     })
     .command('random', 'Calls a command from the random.txt file', {
 
@@ -54,6 +62,14 @@ var runApp = (command, input, year) => {
     }
     else if (command === 'movie'){
         OMDB.searchOMDB(input, year);
+        logArgs();
+    }
+    else if (command === 'news'){
+        newsAPI.newsSearch(input)
+        logArgs();
+    }
+    else if (command === 'weather'){
+        weather.findWeather(input)
         logArgs();
     }
     else if (command === 'random'){
