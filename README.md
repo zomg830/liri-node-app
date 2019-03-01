@@ -20,6 +20,16 @@ node liri.js movie -i "The Lion King" -y "1994"
 
 As you can see, the movie command also has an additional flag, `-y` that accepts the year in which the movie was released.
 
+# Example Workflow
+
+It is very simple to get the app set up, simply navigate to the root directory of the `liri-node-app` and run an example command, such as the one shown below:
+
+![Code Demonstration](/assets/images/Capture1.JPG?raw=true)
+
+Upon execution of the code, the data retrieved from the API will be presented in the command line interface.
+
+![Code Demonstration](/assets/images/Capture2.JPG?raw=true)
+
 # APIs & Dependencies
 * dotenv
 * moment
