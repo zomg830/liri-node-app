@@ -11,9 +11,13 @@ var searchBandEvents = (artist) => {
     axios.get(query)
       .then(function (response) {
         let data = response.data;
+        // console.log(data)
         data.forEach(function(el){
+            let venueLocation = ""
             let venueName = el.venue.name;
-            let venueLocation = `${el.venue.city}, ${el.venue.country}`
+            if (el.venue.region){
+              venueLocation = `${el.venue.city}, ${el.venue.region}`;
+            } else venueLocation = `${el.venue.city}, ${el.venue.country}`;
             let date = moment(new Date(el.datetime)).format('LL');
             console.log(`
             Venue: ${venueName}
