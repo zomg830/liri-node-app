@@ -28,7 +28,7 @@ It is very simple to get the app set up, simply navigate to the root directory o
 
 Upon execution of the code, the data retrieved from the API will be presented in the command line interface.
 
-<img src="/assets/images/Capture4.JPG" width="70%" >
+<img src="/assets/images/Capture5.JPG" width="70%" >
 
 # APIs & Dependencies
 * dotenv
