@@ -3,14 +3,14 @@ var keys = require('./keys.js');
 var moment = require('moment');
 
 var searchOMDB = (movie, year = NaN) => {
-    console.log(`\nSearching OMDB for ${movie}\n`)
+    console.log(`
+    Searching OMDB for ${movie}`)
     var params = {
         apiKey: keys.omdb.key,
         title: movie,
         year: year
     }
     omdb.get(params, function(err, data) {
-        // console.log(data);
         if (data){
             let title = data.Title;
             let year = data.Year;
@@ -22,16 +22,16 @@ var searchOMDB = (movie, year = NaN) => {
             let language = data.Language
             let plot = data.Plot;
             let actors = data.Actors;
-            let log =
-`    Title: ${title} (${year})
-    Released: ${released}
-    Rating: ${rating}
-    IMDB Rating: ${imdb}/10
-    Rotten Tomatoes Rating: ${rt}
-    Country(s) of Production: ${countries}
-    Language(s): ${language}
-    Plot: ${plot}
-    Actors: ${actors}
+            let log =`
+            Title: ${title} (${year})
+            Released: ${released}
+            Rating: ${rating}
+            IMDB Rating: ${imdb}/10
+            Rotten Tomatoes Rating: ${rt}
+            Country(s) of Production: ${countries}
+            Language(s): ${language}
+            Plot: ${plot}
+            Actors: ${actors}
             `
             console.log(log);
         }    

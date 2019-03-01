@@ -5,6 +5,7 @@ const yargs = require('yargs');
 const spotify = require('./spotify');
 const OMDB = require('./OMDB');
 var moment = require('moment');
+var bands = require('./bands');
 
 const inputOptions = {
     describe: 'input data',
@@ -30,7 +31,7 @@ const argv = yargs
         year: yearOptions
     })
     .command('random', 'Calls a command from the random.txt file', {
-        input: inputOptions,
+
     })
     .help()
     .argv;
@@ -42,23 +43,28 @@ var logArgs = () => {
     + JSON.stringify(argv, undefined, 2) + "\n");
 }
 
-if (command === 'concert'){
-    console.log(`Searching local events for ${argv.input}`)
-}
-else if (command === 'spotify'){
-    spotify.searchSpotify(argv.input);
-    logArgs();
-}
-else if (command === 'movie'){
-    OMDB.searchOMDB(argv.input, argv.year);
-    logArgs()
-}
-else if (command === 'random'){
-    console.log(`Running random command`)
-    logArgs()
-}
-else{
-    console.log('Command not recognized');
-    logArgs()
+var runApp = (command, input, year) => {
+    if (command === 'concert'){
+        bands.searchBandEvents(input);
+        logArgs();
+    }
+    else if (command === 'spotify'){
+        spotify.searchSpotify(input);
+        logArgs();
+    }
+    else if (command === 'movie'){
+        OMDB.searchOMDB(input, year);
+        logArgs();
+    }
+    else if (command === 'random'){
+        let fsCommand = fs.readFileSync('random.txt', 'utf-8').split(',');
+        runApp(fsCommand[0], fsCommand[1], parseInt(fsCommand[2]));
+        logArgs();
+    }
+    else{
+        console.log('Command not recognized');
+        logArgs();
+    }
 }
  
+runApp(command, argv.input, argv.year);

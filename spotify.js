@@ -4,7 +4,8 @@ var moment = require('moment');
 
 
 var searchSpotify = (song) => {
-    console.log(`Searching spotify for ${song}`);
+    console.log(`
+    Searching spotify for ${song}`);
     var spotify = new Spotify({
         id: keys.spotify.id,
         secret: keys.spotify.secret

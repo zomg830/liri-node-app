@@ -18,7 +18,7 @@ Each command requires an input flag along with some data. All commands accept `-
 node liri.js movie -i "The Lion King" -y "1994"
 ```
 
-As you can see, the movie command also has an addition flag, `-y` that accepts the year in which the movie was released.
+As you can see, the movie command also has an additional flag, `-y` that accepts the year in which the movie was released.
 
 # APIs & Dependencies
 * dotenv
@@ -26,3 +26,4 @@ As you can see, the movie command also has an addition flag, `-y` that accepts t
 * node-spotify-api
 * omdb-client
 * yargs
+* axios
