@@ -10,7 +10,7 @@ This Language Interpretation and Recognition Interface (*LIRI* for short) is a N
 - random
 ```
 
-Each of these commands corresponds with a different API the `concert ` command links to the Bands in Town API. The `spotify` command should be fairly obvious. The `movie` command links to the OMDB API. And finally the `random` command links to a separate file and draws a command from there.
+Each of these commands corresponds with a different API: the `concert ` command links to the __Bands in Town__ API. The `spotify` command should be fairly obvious. The `movie` command links to the __OMDB__ API. And finally the `random` command links to a separate file and draws a command from there.
 
 Each command requires an input flag along with some data. All commands accept `-i` as the universal input flag. So if I wanted to search for *The Lion King* on the OMDB API, I would simply go to the project directory and run the application as follows:
 
