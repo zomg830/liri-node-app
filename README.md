@@ -4,10 +4,10 @@
 This Language Interpretation and Recognition Interface (*LIRI* for short) is a Node.js-based CLI. The program takes in four commands: 
 
 ```javascript
-* concert
-* spotify
-* movie
-* random
+- concert
+- spotify
+- movie
+- random
 ```
 
 Each of these commands corresponds with a different API the `concert ` command links to the Bands in Town API. The `spotify` command should be fairly obvious. The `movie` command links to the OMDB API. And finally the `random` command links to a separate file and draws a command from there.
@@ -24,11 +24,11 @@ As you can see, the movie command also has an additional flag, `-y` that accepts
 
 It is very simple to get the app set up, simply navigate to the root directory of the `liri-node-app` and run an example command, such as the one shown below:
 
-![Code Demonstration](/assets/images/Capture1.JPG?raw=true)
+![Code Demonstration](/assets/images/Capture1.JPG?raw=true){:height="75%" width="75%"}
 
 Upon execution of the code, the data retrieved from the API will be presented in the command line interface.
 
-![Code Demonstration](/assets/images/Capture2.JPG?raw=true)
+![Code Demonstration](/assets/images/Capture2.JPG?raw=true){:height="75%" width="75%"}
 
 # APIs & Dependencies
 * dotenv
