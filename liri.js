@@ -2,12 +2,12 @@ require("dotenv").config();
 const fs = require('fs');
 const _ = require('lodash');
 const yargs = require('yargs');
-const spotify = require('./spotify');
-const OMDB = require('./OMDB');
 const moment = require('moment');
-const bands = require('./bands');
-const newsAPI = require('./newsAPI');
-const weather = require('./weather');
+const spotify = require('./src/spotify');
+const OMDB = require('./src/OMDB');
+const bands = require('./src/bands');
+const newsAPI = require('./src/newsAPI');
+const weather = require('./src/weather');
 
 const inputOptions = {
     describe: 'input data',
